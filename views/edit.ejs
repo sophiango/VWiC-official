@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VWiC - Vietnamese Women in Computing</title>
+  <link rel="stylesheet" type="text/css" href="/css/edit.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/story.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,700,200,100,300,500,600,800,900" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,700italic,900,400italic,300italic" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.sticky.js"></script>
+  <script type="text/javascript" src="/js/edit.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+</head>
+<body>
+  <div class="container">
+    <h3 class="hostyle">Creating a new hero story</h3>
+    <div class="row">
+      <section>
+        <div class="wizard">
+          <div class="wizard-inner">
+            <div class="connecting-line"></div>
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                  <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+                    <span class="round-tab">
+                      <i class="glyphicon glyphicon-folder-open"></i>
+                    </span>
+                  </a>
+                </li>
+                <li role="presentation" class="disabled">
+                  <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+                    <span class="round-tab">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                  </a>
+                </li>
+                <li role="presentation" class="disabled">
+                  <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+                    <span class="round-tab">
+                      <i class="glyphicon glyphicon-picture"></i>
+                    </span>
+                  </a>
+                </li>
+                <li role="presentation" class="disabled">
+                  <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+                    <span class="round-tab">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </a>
+                </li>
+            </ul>
+          </div>
+
+        <form name="create_new_form" method="post" action="/story/new" data-toggle="validator">
+          <div class="tab-content">
+            <div class="tab-pane active" role="tabpanel" id="step1">
+              <div class="edit-form">
+                <h2 class="edit-label">About the hero: </h2>
+                <!-- <form name="step1-form" role="form" data-toggle="validator"> -->
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">Hero name</div>
+                      <input type="text" name="subject" class="form-control" placeholder="" required>
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Hero image</div>
+                      <input type="url" name="subject_img" class="form-control" placeholder="">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Headline</div>
+                      <input type="text" name="headline" class="form-control" placeholder="" required>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="input-group">
+                          <div class="input-group-addon">Twitter @</div>
+                          <!-- <input type="text" class="form-control" name="twitterAcc"> -->
+                          <input type="text" name="twitterAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="twitterAcc" placeholder="">
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="input-group">
+                          <div class="input-group-addon">Facebook</div>
+                          <!-- <input type="text" class="form-control" name="facebookAcc"> -->
+                          <input type="text" name="facebookAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" placeholder="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                <!-- </form> -->
+              </div>
+              <ul class="list-inline pull-right">
+                <li><button class="edit-form btn next-step">Save and continue</button></li>
+              </ul>
+            </div>
+
+            <div class="tab-pane" role="tabpanel" id="step2">
+              <div class="edit-form-2">
+                <h2 class="edit-label">How the hero inspired you: </h2>
+                <!-- <form id="step2-form"> -->
+                  <textarea name="content" class="form-control" rows="12" placeholder="Place content here" required></textarea>
+                <!-- </form> -->
+              </div>
+              <ul class="list-inline pull-right">
+                <!-- <li><button type="button" class="btn btn-default prev-step">Previous</button></li> -->
+                <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
+                <li><button type="button" class="edit-form btn next-step">Save and continue</button></li>
+              </ul>
+            </div>
+
+            <div class="tab-pane" role="tabpanel" id="step3">
+                <!-- <form id="step3-form" class="edit-form"> -->
+                  <div class="form-group">
+                    <h2 class="edit-label">More resources (articles and images,): </h2>
+                    <p>Articles: (Please paste paragraphs you want to quote and the resource of the article)</p>
+                    <textarea name="quote1" class="form-control quote" rows="12" placeholder=""></textarea>
+                    <div class="input-group">
+                      <div class="input-group-addon">Source 1</div>
+                      <input type="url" name="src1" class="form-control quote" placeholder="src1">
+                    </div>
+                    <textarea name="quote2" class="form-control quote" rows="12" placeholder="Place content here"></textarea>
+                    <div class="input-group">
+                      <div class="input-group-addon">Source 2</div>
+                      <input name="src2" type="url" class="form-control" placeholder="src2">
+                    </div>
+                    <textarea name="quote3" name=quote1 class="form-control quote" rows="12" placeholder="Place content here"></textarea>
+                    <div class="input-group">
+                      <div class="input-group-addon">Source 3</div>
+                      <input name="src3" type="url" class="form-control" placeholder="src3">
+                    </div>
+                    <p>Images: (Please paste the link of the image you want to attach to your post)</p>
+                    <div class="input-group">
+                      <div class="input-group-addon">Image 1</div>
+                      <input name="img1" type="url" class="form-control" placeholder="img1">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Image 2</div>
+                      <input name="img2" type="url" class="form-control" placeholder="img2">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Image 3</div>
+                      <input name="img3" type="url" class="form-control" placeholder="img3">
+                    </div>
+                  </div>
+                <!-- </form> -->
+              <ul class="list-inline pull-right">
+                <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
+                <!-- <li><button type="button" class="edit-form btn btn-default next-step">Skip</button></li> -->
+                <li><button class="edit-form btn next-step">Save and continue</button></li>
+              </ul>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="complete">
+              <!-- <form name="get_story" method="get" action="/story/<%=Story.storyId%>"> -->
+              <div class="edit-form-complete">
+                <p>Thank you for sharing your hero story!</p>
+                <!-- <p>Share it with your network using this link: http://vwic.com/story/<%=Story.storyId%></p> -->
+              </div>
+              <ul class="list-inline pull-right">
+                <!-- <li><button class="edit-form btn btn-default prev-step">Previous</button></li> -->
+                <li><button type="submit" class="edit-form btn next-step">Publish</button></li>
+              </form>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          </form>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
