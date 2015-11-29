@@ -3,9 +3,17 @@ Ref:
 Thanks to:
 http://www.jqueryscript.net/layout/Simple-jQuery-Plugin-To-Create-Pinterest-Style-Grid-Layout-Pinterest-Grid.html
 */
+h3.hostyle{
+  font-size: 50px;
+  color:#810000;
+}
 
-h3.hostyle {
-  font-style:16px;
+h3.banner-text
+{
+	color: #000;
+	font-size: 30px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
 }
 
 body {
