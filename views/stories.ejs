@@ -4,8 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VWiC - Vietnamese Women in Computing</title>
-  <link rel="stylesheet" type="text/css" href="/css/edit.css"/>
-  <link rel="stylesheet" type="text/css" href="/css/story.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/stories.css"/>
   <link rel="stylesheet" type="text/css" href="/css/style.css"/>
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
@@ -17,18 +16,38 @@
   <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
   <script type="text/javascript" src="/js/jquery.sticky.js"></script>
   <script type="text/javascript" src="/js/edit.js"></script>
+  <script type="text/javascript" src="/js/stories.js"></script>
   <script type="text/javascript" src="/js/bootstrap.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
 </head>
 <body>
   <div class="container">
-      <div>
-        <% stories.forEach(function(story) { %>
-          <h1><%=story.subject%></h1>
-          <h2><%=story.headline%></h2>
-        <% }); %>
-        <button>View more</button>
-      </div>
+    <div class="row">
+      <h2>Vietnamese Women in Computing - Hall of Fame</h2>
+      <p>Create your hero story now <a href="http://bootsnipp.com/iframe/Zkk0O" target="_blank">full screen</a></p>
+      <hr>
+        <section id="pinBoot">
+          <% stories.forEach(function(story) { %>
+              <article class="white-panel"><img src="<%=story.subject_img%>" alt="">
+                <h3 class="hostyle"><a href="#"><%=story.subject%></a></h3>
+                <h3 class="banner-text"><%=story.headline%></h3>
+                <p><%=story.content%></p>
+              </article>
+            <% }); %>
+        </section>
+      <hr>
+    </div>
   </div>
+
+
+            <!--<div class="container">
+            <div>
+            <% stories.forEach(function(story) { %>
+            <h1><%=story.subject%></h1>
+            <h2><%=story.headline%></h2>
+            <% }); %>
+            <button>View more</button>
+          </div>
+        </div> -->
 </body>
 </html>

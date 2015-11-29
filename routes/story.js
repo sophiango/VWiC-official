@@ -24,6 +24,11 @@ router.get('/:storyId',function(req,res){
     }
   });
 });
+
+// router.get('/new',function(req,res){
+//   res.render('edit');
+// });
+
 router.post('/new',function(req,res){
   var story = new Story({
     storyId : chance.natural({min:1, max:10000}).toString(),
@@ -39,8 +44,9 @@ router.post('/new',function(req,res){
     if (err){
       console.log(err);
     } else {
-      // res.render('story',story);
+      res.render('story',story);
       console.log('Successfully save');
+
     }
     });
 });

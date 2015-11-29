@@ -10,6 +10,7 @@ var commentSchema = new mongoose.Schema({
   userId : {type: String, required : true},
   username : {type: String, required : true},
   content : {type: String, required : true},
+  img_profile : {type:String},
   createdAt : Date
 }, {_id:false});
 

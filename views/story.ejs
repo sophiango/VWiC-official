@@ -73,20 +73,22 @@
           </div>
         </div>
         <div class="post-description">
-          <p>I met Kathy Pham at GHC where she presented with other leaders from the White House to talk about Media Tech department</p>
+          <p><%=story.content%></p>
+          <% story.quotes.forEach(function(quote) { %>
+            <blockquote>
+              <p>“<%=quote.quote%>”</p>
+              <a href="<%=quote.source%>"><small><cite title="Source Title"><%=quote.source%></cite></small></a>
+            </blockquote>
+          <% }); %>
 
-          <blockquote>
+          <!-- <blockquote>
             <p>“abcdefshvkvnldvdnivlhdiufhvnhdzfnvkdnfkvndnvdkwageufwegqpidpqdmclkwncklnskcnabcdefshvkvnldvdnivlhdiufhvnhdzfnvkdnfkvndnvdkwageufwegqpidpqdmclkwncklnskcnabcdefshvkvnldvdnivlhdiufhvnhdzfnvkdnfkvndnvdkwageufwegqpidpqdmclkwncklnskcn”</p>
             <a href=""><small><cite title="Source Title">medium.com</cite></small></a>
           </blockquote>
           <blockquote>
             <p>“abcdefshvkvnldvdnivlhdiufhvnhdzfnvkdnfkvndnvdkwageufwegqpidpqdmclkwncklnskcnabcdefshvkvnldvdnivlhdiufhvnhdzfnvkdnfkvndnvdkwageufwegqpidpqdmclkwncklnskcnabcdefshvkvnldvdnivlhdiufhvnhdzfnvkdnfkvndnvdkwageufwegqpidpqdmclkwncklnskcn”</p>
             <a href=""><small><cite title="Source Title">medium.com</cite></small></a>
-          </blockquote>
-          <blockquote>
-            <p>“abcdefshvkvnldvdnivlhdiufhvnhdzfnvkdnfkvndnvdkwageufwegqpidpqdmclkwncklnskcnabcdefshvkvnldvdnivlhdiufhvnhdzfnvkdnfkvndnvdkwageufwegqpidpqdmclkwncklnskcnabcdefshvkvnldvdnivlhdiufhvnhdzfnvkdnfkvndnvdkwageufwegqpidpqdmclkwncklnskcn”</p>
-            <a href=""><small><cite title="Source Title">medium.com</cite></small></a>
-          </blockquote>
+          </blockquote> -->
         </div>
 
         <div class="post-footer">
@@ -97,18 +99,19 @@
             </span>
           </div>
           <ul class="comments-list">
-            <li class="comment">
-            <img class="pull-left avatar" src="http://bootdey.com/img/Content/user_1.jpg" alt="avatar">
-              <div class="comment-body">
-                <div class="comment-heading">
-                  <h4 class="user">Le Nguyen</h4>
-                  <h5 class="time">5 minutes ago</h5>
-                </div>
-                <p>Such an inspiration</p>
-              </div>
-            </li>
-
-            <li class="comment">
+              <% story.comments.forEach(function(comment) { %>
+               <li class="comment">
+                <img class="pull-left avatar" src="http://bootdey.com/img/Content/user_1.jpg" alt="avatar">
+                  <div class="comment-body">
+                    <div class="comment-heading">
+                      <h4 class="user"><%=comment.username%></h4>
+                      <h5 class="time"><%=comment.createdAt%></h5>
+                    </div>
+                    <p><%=comment.content%></p>
+                  </div>
+                </li>
+              <% }); %>
+            <!-- <li class="comment">
               <img class="pull-left avatar" src="http://bootdey.com/img/Content/user_3.jpg" alt="avatar">
                 <div class="comment-body">
                   <div class="comment-heading">
@@ -128,7 +131,7 @@
                   </div>
                   <p>She is a really cool person</p>
                 </div>
-            </li>
+            </li> -->
           </ul>
         </div> <!-- post footer -->
     </div>
