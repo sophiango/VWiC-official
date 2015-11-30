@@ -9,7 +9,7 @@ var router = express.Router();
 module.exports = function(passport){
 
   router.get('/', function(req, res, next) {
-    res.render('index_login');
+    res.render('index');
   });
 
   router.get('/story/new',function(req,res){
@@ -43,13 +43,6 @@ module.exports = function(passport){
     res.render('signup.ejs', { message: req.flash('signupMessage') });
   });
 
-  // process the signup form
-  router.post('/signup', passport.authenticate('local-signup', {
-    successRedirect : '/profile', // redirect to the secure profile section
-    failureRedirect : '/signup', // redirect back to the signup page if there is an error
-    failureFlash : true // allow flash messages
-  }));
-
   // =====================================
   // PROFILE SECTION =========================
   // =====================================
@@ -65,7 +58,7 @@ module.exports = function(passport){
   // FACEBOOK ROUTES =====================
   // =====================================
   // route for facebook authentication and login
-  router.get('/auth/facebook', passport.authenticate('facebook', { scope : 'email' }));
+  router.get('/auth/facebook', passport.authenticate('facebook', { scope :['email']}));
 
   // handle the callback after facebook has authenticated the user
   router.get('/auth/facebook/callback',
