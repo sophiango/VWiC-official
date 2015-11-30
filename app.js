@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var routes = require('./routes/index');
 var users = require('./routes/users');
 var stories = require('./routes/story');
 var events = require('./routes/event');
@@ -13,6 +12,10 @@ var events = require('./routes/event');
 var app = express();
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://sngo:vwic15@ds059524.mongolab.com:59524/vwic');
+
+var passport = require('passport');
+var flash    = require('connect-flash');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -25,6 +28,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+require('./config/passport')(passport); // pass passport for configuration
+// required for passport
+var expressSession = require('express-session');
+app.use(expressSession({secret: 'mySecretKey'}));
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+
+var routes = require('./routes/index')(passport);
 app.use('/', routes);
 app.use('/user', users);
 app.use('/story', stories);
