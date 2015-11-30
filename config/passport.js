@@ -61,13 +61,15 @@ module.exports = function(passport) {
           return done(null, user); // user found, return that user
 
         } else {
-          console.log('profile: ' + profile.emails);
+          console.log('data: ' + profile.gender + profile.profileUrl)
           // if there is no user found with that facebook id, create them
           var newUser = new User();
           // set all of the facebook information in our user model
           newUser.facebook.id = profile.id; // set the users facebook id
           newUser.facebook.token = token; // we will save the token that facebook provides to the user
-          newUser.facebook.name = profile.displayName;
+          newUser.facebook.displayName = profile.displayName;
+          newUser.facebook.gender = profile.gender;
+          newUser.facebook.profileUrl = profile.profileUrl;
 
           // save our user to the database
           newUser.save(function(err) {

@@ -1,41 +1,129 @@
-<!-- views/profile.ejs -->
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
 <head>
-	<title>Node Authentication</title>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-	<style>
-		body 		{ padding-top:80px; word-wrap:break-word; }
-	</style>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VWiC - Vietnamese Women in Computing</title>
+  <link rel="stylesheet" type="text/css" href="/css/story.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,700,200,100,300,500,600,800,900" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,700italic,900,400italic,300italic" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.sticky.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+  <script>
+  $(window).load(function(){
+    $("#menu").sticky({ topSpacing: 0 });
+  });
+  </script>
 </head>
 <body>
-<div class="container">
+  <!-- NAVBAR -->
+  <div class="navbar menubar" id="menu">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle menu-button" data-toggle="collapse" data-target="#myNavbar">
+          <span class="glyphicon glyphicon-align-justify"></span>
+        </button>
+        <a class="navbar-brand logo" href="#">VWiC</a>
+      </div>
+      <div>
+        <nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
+          <ul class="nav navbar-nav navbar-right navstyle">
+            <li><a href="/" class="page-scroll">Home</a></li>
+            <li><a href="/#about" class="page-scroll">About Us</a></li>
+            <li><a href="/#stories" class="page-scroll active">Hall of fame</a></li>
+            <li><a href="/#mentorship" class="page-scroll">Mentorship</a></li>
+            <li><a href="/#events" class="page-scroll">Events</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 
-	<div class="page-header text-center">
-		<h1><span class="fa fa-anchor"></span> Profile Page</h1>
-		<a href="/logout" class="btn btn-default btn-sm">Logout</a>
-	</div>
+  <!-- BODY -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1 class="hostyle">Welcome back, Sophia</h1>
+      </div>
+      <div class="col-md-4">
+        <img src="https://pbs.twimg.com/profile_images/3627590143/c00483efc3d5f4dfbcdad86ae8efd7d1_bigger.jpeg" name="sophiango" width="140" height="140" class="img-circle"/>
+      </div>
+    </div>
+    <div>
+      <h2 class="banner-text">You wrote 10 stories</h2>
+      <div class="grid mix category-1 col-md-4 col-sm-6 col-xs-6" data-myorder="8">
+        <figure class="effect-Beauty">
+          <img src="images/DuyLoan.jpg" alt="img13"/>
+          <figcaption>
+            <h2>Beautiful <span>Heart</span></h2>
+            <p>Beauty did not need any help. Everybody knew that.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="grid mix category-1 col-md-4 col-sm-6 col-xs-6" data-myorder="8">
+        <figure class="effect-Beauty">
+          <img src="images/DuyLoan.jpg" alt="img13"/>
+          <figcaption>
+            <h2>Beautiful <span>Heart</span></h2>
+            <p>Beauty did not need any help. Everybody knew that.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="grid mix category-1 col-md-4 col-sm-6 col-xs-6" data-myorder="8">
+        <figure class="effect-Beauty">
+          <img src="images/DuyLoan.jpg" alt="img13"/>
+          <figcaption>
+            <h2>Beautiful <span>Heart</span></h2>
+            <p>Beauty did not need any help. Everybody knew that.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
 
-	<div class="row">
+    <div>
+      <h2 class="banner-text">You be inspired by 1000 stories/women</h2>
+      <div class="grid mix category-1 col-md-4 col-sm-6 col-xs-6" data-myorder="8">
+        <figure class="effect-Beauty">
+          <img src="images/DuyLoan.jpg" alt="img13"/>
+          <figcaption>
+            <h2>Beautiful <span>Heart</span></h2>
+            <p>Beauty did not need any help. Everybody knew that.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="grid mix category-1 col-md-4 col-sm-6 col-xs-6" data-myorder="8">
+        <figure class="effect-Beauty">
+          <img src="images/DuyLoan.jpg" alt="img13"/>
+          <figcaption>
+            <h2>Beautiful <span>Heart</span></h2>
+            <p>Beauty did not need any help. Everybody knew that.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="grid mix category-1 col-md-4 col-sm-6 col-xs-6" data-myorder="8">
+        <figure class="effect-Beauty">
+          <img src="images/DuyLoan.jpg" alt="img13"/>
+          <figcaption>
+            <h2>Beautiful <span>Heart</span></h2>
+            <p>Beauty did not need any help. Everybody knew that.</p>
+            <a href="#">View more</a>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
 
-		<!-- FACEBOOK INFORMATION -->
-		<div class="col-sm-6">
-			<div class="well">
-				<h3 class="text-primary"><span class="fa fa-facebook"></span> Facebook</h3>
-
-					<p>
-						<strong>id</strong>: <%= user.facebook.id %><br>
-						<strong>token</strong>: <%= user.facebook.token %><br>
-						<strong>token</strong>: <%= user.facebook.name %><br>
-						<strong>email</strong>: <%= user.facebook.email %><br>
-					</p>
-
-			</div>
-		</div>
-
-	</div>
-
-</div>
+    </div>
+  </div>
 </body>
 </html>

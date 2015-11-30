@@ -10,10 +10,13 @@ var bcrypt   = require('bcrypt-nodejs');
 // });
 
 var UserSchema = mongoose.Schema({
-  facebook         : {
-        id           : String,
-        token        : String,
-        name         : String
+  facebook : {
+        id : {type: String, unique: true},
+        token : String,
+        displayName : String,
+        profileUrl : String,
+        gender : String,
+        last_active : {type:Date, default: Date.now}
     }
 });
 
