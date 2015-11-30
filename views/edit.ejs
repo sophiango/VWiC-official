@@ -122,57 +122,80 @@
                   <div class="form-group">
                     <h2 class="edit-label">More resources (articles and images,): </h2>
                     <p>Articles: (Please paste paragraphs you want to quote and the resource of the article)</p>
-                    <textarea name="quote1" class="form-control quote" rows="12" placeholder=""></textarea>
+                    <!-- <textarea name="quote1" class="form-control quote" rows="12" placeholder=""></textarea> -->
+                    <div class="input-group">
+                      <div class="input-group-addon">Quote 1</div>
+                      <input type="text" name="quote1" class="form-control quote" placeholder="">
+                    </div>
                     <div class="input-group">
                       <div class="input-group-addon">Source 1</div>
-                      <input type="url" name="src1" class="form-control quote" placeholder="src1">
+                      <input type="url" name="src1" class="form-control quote" placeholder="">
                     </div>
-                    <textarea name="quote2" class="form-control quote" rows="12" placeholder="Place content here"></textarea>
+                    <!-- <textarea name="quote2" class="form-control quote" rows="12" placeholder="Place content here"></textarea> -->
+                    <div class="input-group">
+                      <div class="input-group-addon">Quote 2</div>
+                      <input type="text" name="quote2" class="form-control quote" placeholder="">
+                    </div>
                     <div class="input-group">
                       <div class="input-group-addon">Source 2</div>
-                      <input name="src2" type="url" class="form-control" placeholder="src2">
+                      <input name="src2" type="url" class="form-control" placeholder="">
                     </div>
-                    <textarea name="quote3" name=quote1 class="form-control quote" rows="12" placeholder="Place content here"></textarea>
+                    <!-- <textarea name="quote3" name=quote1 class="form-control quote" rows="12" placeholder="Place content here"></textarea> -->
+                    <div class="input-group">
+                      <div class="input-group-addon">Quote 3</div>
+                      <input type="text" name="quote3" class="form-control quote" placeholder="">
+                    </div>
                     <div class="input-group">
                       <div class="input-group-addon">Source 3</div>
-                      <input name="src3" type="url" class="form-control" placeholder="src3">
+                      <input name="src3" type="url" class="form-control" placeholder="">
                     </div>
                     <p>Images: (Please paste the link of the image you want to attach to your post)</p>
                     <div class="input-group">
                       <div class="input-group-addon">Image 1</div>
-                      <input name="img1" type="url" class="form-control" placeholder="img1">
+                      <input name="img1" type="url" class="form-control" placeholder="">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Caption 1</div>
+                      <input name="cap1" type="text" class="form-control" placeholder="">
                     </div>
                     <div class="input-group">
                       <div class="input-group-addon">Image 2</div>
-                      <input name="img2" type="url" class="form-control" placeholder="img2">
+                      <input name="img2" type="url" class="form-control" placeholder="">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Caption 2</div>
+                      <input name="cap2" type="text" class="form-control" placeholder="">
                     </div>
                     <div class="input-group">
                       <div class="input-group-addon">Image 3</div>
-                      <input name="img3" type="url" class="form-control" placeholder="img3">
+                      <input name="img3" type="url" class="form-control" placeholder="">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Caption 1</div>
+                      <input name="cap3" type="text" class="form-control" placeholder="">
                     </div>
                   </div>
                 <!-- </form> -->
               <ul class="list-inline pull-right">
                 <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
                 <!-- <li><button type="button" class="edit-form btn btn-default next-step">Skip</button></li> -->
-                <li><button class="edit-form btn next-step">Save and continue</button></li>
+                <li><button type="submit" class="edit-form btn next-step">Publish</button></li>
               </ul>
+              </form>
             </div>
             <div class="tab-pane" role="tabpanel" id="complete">
-
+              <form name="view-story" method="get" action="/story">
               <div class="edit-form-complete">
                 <p>Thank you for sharing your hero story!</p>
-
               </div>
               <ul class="list-inline pull-right">
-
-                <li><button type="submit" class="edit-form btn next-step">Publish</button></li>
-              </form>
+                <!-- <li><a href="/story"><button type="submit" class="edit-form btn next-step">View story</button></a></li> -->
+                <li><button type="submit" class="edit-form btn">View story</button></li>
               </ul>
+              </form>
             </div>
             <div class="clearfix"></div>
           </div>
-          </form>
         </div>
       </section>
     </div>

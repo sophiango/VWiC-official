@@ -2,22 +2,23 @@ var mongoose = require('mongoose');
 
 var quoteSchema = new mongoose.Schema({
   // quoteId : {type: String, required : true},
-  quote: {type: String, required : true},
-  source: {type: String, required : true},
-});
+  quote: {type: String},
+  source: {type: String},
+  createdAt : { type: Date, default: Date.now },
+}, {_id:false});
 
 var commentSchema = new mongoose.Schema({
   userId : {type: String, required : true},
   username : {type: String, required : true},
   content : {type: String, required : true},
   img_profile : {type:String},
-  createdAt : Date
+  createdAt : { type: Date, default: Date.now },
 }, {_id:false});
 
 var imageSchema = new mongoose.Schema({
-    url : {type:String, required: true},
+    url : {type:String},
     caption : String,
-    createdAt : Date
+    createdAt : { type: Date, default: Date.now },
 }, {_id:false});
 
 var StorySchema = new mongoose.Schema({
