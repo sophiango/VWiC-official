@@ -14,7 +14,7 @@ var UserSchema = mongoose.Schema({
         id : {type: String, unique: true},
         token : String,
         displayName : String,
-        profileUrl : String,
+        imageUrl : String,
         gender : String,
         last_active : {type:Date, default: Date.now}
     }

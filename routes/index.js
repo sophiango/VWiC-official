@@ -21,15 +21,15 @@ module.exports = function(passport){
   // =====================================
   // we will want this protected so you have to be logged in to visit
   // we will use route middleware to verify this (the isLoggedIn function)
-  // router.get('/profile', isLoggedIn, function(req, res) {
-  //   res.render('profile', {
-  //     user : req.user // get the user out of session and pass to template
-  //   });
-  // });
-
-  router.get('/profile', function(req, res) {
-    res.render('profile');
+  router.get('/profile', isLoggedIn, function(req, res) {
+    res.render('profile_arch', {
+      user : req.user // get the user out of session and pass to template
+    });
   });
+
+  // router.get('/profile', function(req, res) {
+  //   res.render('profile');
+  // });
 
   // =====================================
   // FACEBOOK ROUTES =====================
@@ -52,7 +52,7 @@ module.exports = function(passport){
     res.redirect('/');
   });
   return router;
-}
+};
 
 // route middleware to make sure
 function isLoggedIn(req, res, next) {
