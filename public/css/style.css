@@ -259,7 +259,7 @@
 /------------------------------------------*/
 .mentorship
 {
-	background-color: #45AACB;
+	background-color: #294280;
 	padding: 100px 0px;
 }
 .mentorship h1
@@ -274,7 +274,7 @@
 {
 	display: inline-block;
 	border: medium none;
-	background-color: #3EC9C3;
+	background-color: #CB5750;
 	padding: 12px 38px;
 	color: #FFF;
 	border-radius: 4px;
@@ -534,7 +534,7 @@ figure.effect-Beauty:hover p {
 
 .subscribe-social
 {
-	background-color: #CB5750;
+	background-color: #162120;
 	padding: 20px 0px 5px;
 }
 
@@ -585,7 +585,7 @@ figure.effect-Beauty:hover p {
 {
 	background-color: #fff !important;
 	border: 1px solid #fff !important;
-	color: #CB5750 !important;
+	color: #162120 !important;
 }
 .form-control::-webkit-input-placeholder { color: white !important; }
 .form-control:-moz-placeholder { color: white !important; }
@@ -602,7 +602,7 @@ figure.effect-Beauty:hover p {
 .foot-logo
 {
 	font-family: 'Pacifico', cursive;
-	color: #3EC9C3;
+	color: #294280;
 	font-size: 30px;
 	text-align: center;
 }
