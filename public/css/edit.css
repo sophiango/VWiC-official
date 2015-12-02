@@ -1,3 +1,6 @@
+#step3 .input-group{
+    padding:10px;
+}
 .ng-invalid.ng-dirty{
   border-color:#FA787E;
 }
