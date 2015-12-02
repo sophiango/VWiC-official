@@ -1,23 +1,23 @@
 var mongoose = require('mongoose');
 var bcrypt   = require('bcrypt-nodejs');
 
-// var UserSchema = new mongoose.Schema({
-//   userId : {type: String, unique: true},
-//   email : {type: String, unique: true},
-//   user_img : String,
-//   createdAt: Date,
-//   lastActive: Date
-// });
+var StorySchema = mongoose.Schema({
+  subject: String,
+  headline: String,
+  storyId: String
+});
 
 var UserSchema = mongoose.Schema({
-  facebook : {
-        id : {type: String, unique: true},
-        token : String,
-        displayName : String,
-        imageUrl : String,
-        gender : String,
-        last_active : {type:Date, default: Date.now}
-    }
+  user_facebook_id : {type: String, unique: true},
+  token : String,
+  displayName : String,
+  fullName : String,
+  imageUrl : String,
+  gender : String,
+  email : String,
+  created_stories : [StorySchema],
+  inspired_stories : [StorySchema],
+  last_active : {type:Date, default: Date.now}
 });
 
 // UserSchema.pre('save', function(next){
