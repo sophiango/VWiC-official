@@ -91,6 +91,13 @@
 	color: #B11818;
 	font-size: 60px;
 }
+
+.banner{
+	font-family: 'Raleway', cursive;
+	color:#2196F3;
+	font-size:50px;
+}
+
 .pstyle
 {
 	font-family: 'Raleway', sans-serif;
@@ -103,10 +110,10 @@
 }
 .banner-text h2
 {
-	color: #fff;
-	font-size: 40px;
-	font-family: 'Raleway', sans-serif;
-	font-weight: 700;
+	color: #F44336;
+	font-size: 50px;
+	font-family: 'Pacifico', sans-serif;
+	font-weight: 400;
 }
 .spanstyle
 {
@@ -591,7 +598,7 @@ figure.effect-Beauty:hover p {
 }
 .info p
 {
-	font-family: "Source Sans Pro",sans-serif;
+	font-family: "Raleway",sans-serif;
 	font-weight: 400;
 	font-size: 12px;
 	text-transform: uppercase;
