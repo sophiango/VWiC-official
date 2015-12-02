@@ -11,7 +11,7 @@ var events = require('./routes/event');
 
 var app = express();
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://sngo:vwic15@ds059524.mongolab.com:59524/vwic');
+mongoose.connect('mongodb://admin:vwic15@ds061984.mongolab.com:61984/vwic');
 
 var passport = require('passport');
 var flash    = require('connect-flash');
