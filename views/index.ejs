@@ -12,8 +12,6 @@
   <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,700italic,900,400italic,300italic' rel='stylesheet' type='text/css'>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.js"></script> -->
   <script type="text/javascript" src="/js/jquery.sticky.js"></script>
   <script>
   $(window).load(function(){
@@ -50,10 +48,10 @@
       <div>
         <nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
           <ul class="nav navbar-nav navbar-left navstyle">
-            <li><a href="/" class="page-scroll active">Home</a></li>
-            <li><a href="/#about" class="page-scroll">About Us</a></li>
-            <li><a href="/#stories" class="page-scroll">Hall of fame</a></li>
-            <li><a href="/#subscribe" class="page-scroll">Contact Us</a></li>
+            <li><a href="#banner" class="page-scroll active">Home</a></li>
+            <li><a href="#about" class="page-scroll">About Us</a></li>
+            <li><a href="#stories" class="page-scroll">Hall of fame</a></li>
+            <li><a href="#subscribe" class="page-scroll">Contact Us</a></li>
           </ul>
           <a href="/auth/facebook" class="btn btn-primary fb nav navbar-nav navbar-right"><span><img src="images/facebook.png" width="30px" height="30px"></img></span> Log in with Facebook</a>
         </nav>
@@ -269,10 +267,10 @@
           <li><a href="https://www.facebook.com/groups/886624341391259/"><i class="fa fa-facebook-square"></i></a></li>
           <li><a href="https://www.linkedin.com/groups/7016991"><i class="fa fa-linkedin-square"></i></a></li>
           <li><a href="mailto:vietnamesewic-keepers@systers.org"><i class="fa fa-envelope"></i></a></li>
-        </div>
       </div>
     </div>
   </div>
+</div>
 
   <!-- FOOTER -->
   <footer class="foot">
@@ -332,7 +330,7 @@
     });
 
     // start all the timers
-    $('#gallery').waypoint(function() {
+    $('#stories').waypoint(function() {
       $('.timer').each(count);
     });
 
