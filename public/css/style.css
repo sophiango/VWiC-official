@@ -24,9 +24,10 @@
 {
     text-align: center;
     font-size: 60px;
-    color: rgba(224, 224, 224, 0.75);
+    /*color: rgba(224, 224, 224, 0.75);*/
+		color: #000;
     display: inline-block;
-    margin: 30px -2px 0px 0px;
+    /*margin: 30px -2px 0px 0px;*/
 }
 .arrow:hover, .arrow:focus
 {
@@ -261,7 +262,7 @@
 .subscribe h2{
 	color: #fff;
 	font-family: "Raleway",sans-serif;
-	font-weight: 100;
+	font-weight: 200;
 	font-size: 30px;
 	margin-bottom: 20px;
 	text-transform: uppercase;
@@ -270,6 +271,7 @@
 .subscribe
 {
 	background-color: #294280;
+	/*background-color:#FED136;*/
 	padding: 20px 0px;
 }
 .subscribe h1
@@ -356,7 +358,8 @@
 }
 .alldesc h2
 {
-    color: #CB5750;
+    /*color: #CB5750;*/
+		color: #B11818;
     font-family: "Source Sans Pro",sans-serif;
     font-size: 40px;
     margin-top: 0px !important;
@@ -548,18 +551,20 @@ figure.effect-Beauty:hover p {
 	padding: 20px 0px 5px;
 }*/
 
-/*.form-group
+.form-group
 {
+	margin-top:10px;
 	margin-bottom: 0px !important;
 
-}*/
-/*.form-control, .form-control:focus
+}
+.form-control, .form-control:focus
 {
-	color: #fff !important;
-	border: 1px solid #fff !important;
-	background-color: #CB5750 !important;
+	color: #000 !important;
+	border: 1px solid #294280 !important;
+	background-color: #fff !important;
+	/*background-color: #CB5750 !important;*/
 	box-shadow: none !important;
-}*/
+}
 .social
 {
 	list-style: none;
@@ -595,12 +600,19 @@ figure.effect-Beauty:hover p {
 {
 	background-color: #fff !important;
 	border: 1px solid #fff !important;
-	color: #162120 !important;
+	/*color: #162120 !important;*/
+	color: #294280 !important;
+	text-transform: uppercase;
 }
-.form-control::-webkit-input-placeholder { color: white !important; }
+/*.form-control::-webkit-input-placeholder { color: white !important; }
 .form-control:-moz-placeholder { color: white !important; }
 .form-control::-moz-placeholder { color: white !important; }
-.form-control:-ms-input-placeholder { color: white !important; }
+.form-control:-ms-input-placeholder { color: white !important; }*/
+
+.form-control::-webkit-input-placeholder { color: black !important; }
+.form-control:-moz-placeholder { color: black !important; }
+.form-control::-moz-placeholder { color: black !important; }
+.form-control:-ms-input-placeholder { color: black !important; }
 
 /*------------------------------------------/
 /-----------------Footer--------------------/
