@@ -154,7 +154,7 @@
 	display: inline-block;
 	height: auto !important;
 	font-family: 'Pacifico', cursive;
-	color: #fff !important;
+	color: #F44336 !important;
 	font-size: 34px !important;
 }
 
@@ -162,6 +162,7 @@
 {
 	padding: 24px 15px !important;
 	color: #fff;
+	font-size:18px;
 	font-family: "Source Sans Pro",sans-serif;
 	font-weight: 400;
 	text-transform: uppercase;
@@ -169,8 +170,8 @@
 }
 .navstyle li a:hover, .navstyle li a:focus, .navstyle li a.active
 {
-	background-color: #294280 !important;
-	color: #fff;
+	background-color: #FED136 !important;
+	color: #F44336;
 }
 
 .navbar-right {
@@ -260,9 +261,9 @@
 /------------------------------------------*/
 
 .subscribe h2{
-	color: #fff;
+	color: #F44351;
 	font-family: "Raleway",sans-serif;
-	font-weight: 200;
+	font-weight: 400;
 	font-size: 30px;
 	margin-bottom: 20px;
 	text-transform: uppercase;
@@ -270,7 +271,7 @@
 
 .subscribe
 {
-	background-color: #294280;
+	background-color: #FED136;
 	/*background-color:#FED136;*/
 	padding: 20px 0px;
 }
@@ -601,7 +602,7 @@ figure.effect-Beauty:hover p {
 	background-color: #fff !important;
 	border: 1px solid #fff !important;
 	/*color: #162120 !important;*/
-	color: #294280 !important;
+	color: #F44336 !important;
 	text-transform: uppercase;
 }
 /*.form-control::-webkit-input-placeholder { color: white !important; }
@@ -609,10 +610,10 @@ figure.effect-Beauty:hover p {
 .form-control::-moz-placeholder { color: white !important; }
 .form-control:-ms-input-placeholder { color: white !important; }*/
 
-.form-control::-webkit-input-placeholder { color: black !important; }
-.form-control:-moz-placeholder { color: black !important; }
-.form-control::-moz-placeholder { color: black !important; }
-.form-control:-ms-input-placeholder { color: black !important; }
+.form-control::-webkit-input-placeholder { color: red !important; }
+.form-control:-moz-placeholder { color: red !important; }
+.form-control::-moz-placeholder { color: red !important; }
+.form-control:-ms-input-placeholder { color: red !important; }
 
 /*------------------------------------------/
 /-----------------Footer--------------------/
@@ -624,7 +625,7 @@ figure.effect-Beauty:hover p {
 .foot-logo
 {
 	font-family: 'Pacifico', cursive;
-	color: #294280;
+	color: #F44336;
 	font-size: 30px;
 	text-align: center;
 }
@@ -676,7 +677,7 @@ display: inline-block;
     padding: 8px 10px !important;
     margin-top: 9px !important;
     font-size: 30px !important;
-	color: #fff;
+		color: #fff;
 }
 figure.effect-Beauty h2 {
     margin-top: 15%;
