@@ -92,10 +92,12 @@
 	font-size: 60px;
 }
 
-.banner{
-	font-family: 'Raleway', cursive;
+.underheader{
+	font-family: 'Source Sans Pro', cursive;
 	color:#2196F3;
 	font-size:50px;
+	text-transform: uppercase;
+	font-weight:600;
 }
 
 .pstyle
@@ -243,10 +245,11 @@
 {
 	margin: 0px !important;
 	font-family: 'Raleway', sans-serif;
+	color: #F44336;
 }
 .timer
 {
-	color: #45aacb;
+	color: #2196F3;
 	font-family: "Source Sans Pro",sans-serif;
 	font-size: 50px;
 	font-weight: 600;
@@ -367,13 +370,20 @@
 .alldesc h2
 {
     /*color: #CB5750;*/
-		color: #B11818;
+		color: #F44336;
     font-family: "Source Sans Pro",sans-serif;
     font-size: 40px;
     margin-top: 0px !important;
     font-weight: 600;
 	letter-spacing: 1px;
 	text-transform: uppercase;
+}
+.alldesc h3
+{
+	font-family: 'Pacifico', sans-serif;
+	margin-top: 0px !important;
+	font-size:30px;
+	color:#F44336;
 }
 .desc
 {

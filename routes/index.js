@@ -8,8 +8,18 @@ var router = express.Router();
 
 module.exports = function(passport){
 
-  router.get('/', function(req, res, next) {
-    res.render('index');
+  router.get('/', function(req, res) {
+    if (req.isAuthenticated()){
+      res.render('index', {
+        endpoint : '/logout',
+        button_display:' Log out'
+      });
+    } else {
+      res.render('index', {
+        endpoint : '/auth/facebook',
+        button_display:' Log in with Facebook'
+      });
+    }
   });
 
   router.get('/story/new',function(req,res){

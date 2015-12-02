@@ -1,26 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VWiC - Vietnamese Women in Computing</title>
-  <link rel="stylesheet" type="text/css" href="/css/story.css"/>
-  <link rel="stylesheet" type="text/css" href="/css/style.css"/>
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
-  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
-  <link href="http://fonts.googleapis.com/css?family=Raleway:400,700,200,100,300,500,600,800,900" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,700italic,900,400italic,300italic" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-  <script type="text/javascript" src="/js/jquery.sticky.js"></script>
-  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-
-  <script>
-  $(window).load(function(){
-    $("#menu").sticky({ topSpacing: 0 });
-  });
-  </script>
-</head>
+  <% include header %>
+</head>  
 <body>
   <!-- NAVBAR -->
   <div class="navbar menubar" id="menu">
@@ -29,21 +11,21 @@
         <button type="button" class="navbar-toggle menu-button" data-toggle="collapse" data-target="#myNavbar">
           <span class="glyphicon glyphicon-align-justify"></span>
         </button>
-        <a class="navbar-brand logo" href="#">VWiC</a>
+        <a class="navbar-brand logo" href="/">VWiC</a>
       </div>
       <div>
         <nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
-          <ul class="nav navbar-nav navbar-right navstyle">
-            <li><a href="/" class="page-scroll">Home</a></li>
-            <li><a href="/#about" class="page-scroll">About Us</a></li>
-            <li><a href="/#stories" class="page-scroll active">Hall of fame</a></li>
-            <li><a href="/#mentorship" class="page-scroll">Mentorship</a></li>
-            <li><a href="/#events" class="page-scroll">Events</a></li>
+          <ul class="nav navbar-nav navbar-left navstyle">
+            <li><a href="/" class="page-scroll active">Home</a></li>
+            <li><a href="/story" class="page-scroll">Hall of fame</a></li>
           </ul>
+          <form method="GET" action="/logout">
+            <button type="submit" class="btn btn-lg btn-danger navbar-btn navbar-right">Log out</button>
+          </form>
         </nav>
       </div>
-    </div>
   </div>
+</div> <!-- END SECTION NAVBAR -->
 
   <!-- BODY -->
   <div class="container">
