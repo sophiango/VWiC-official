@@ -72,48 +72,54 @@
               </ul>
             </div>
 
-            <form name="create_new_form" method="post" action="/story/new" data-toggle="validator">
-              <div class="tab-content">
-                <div class="tab-pane active" role="tabpanel" id="step1">
-                  <div class="edit-form">
-                    <h2 class="edit-label">About the hero: </h2>
-                    <!-- <form name="step1-form" role="form" data-toggle="validator"> -->
-                    <div class="form-group">
-                      <div class="input-group">
-                        <label for="subject">Hero Name:</label>
-                        <input type="text" name="subject" class="form-control" placeholder="" required>
-                      </div>
-                      <div class="input-group">
-                        <label for="subject">Hero Image:</label>
-                        <input type="url" name="subject_img" class="form-control" placeholder="">
-                      </div>
-                      <div class="input-group">
-                        <label for="subject">Headline:</label>
-                        <input type="text" name="headline" class="form-control" placeholder="" required>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-6">
-                          <div class="input-group">
-                            <div class="input-group-addon">Twitter @</div>
-                            <!-- <input type="text" class="form-control" name="twitterAcc"> -->
-                            <input type="text" name="twitterAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="twitterAcc" placeholder="">
-                          </div>
-                        </div>
-                        <div class="col-sm-6">
-                          <div class="input-group">
-                            <div class="input-group-addon">Facebook</div>
-                            <!-- <input type="text" class="form-control" name="facebookAcc"> -->
-                            <input type="text" name="facebookAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" placeholder="">
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- </form> -->
+        <form name="create_new_form" method="post" action="/story/new" data-toggle="validator">
+          <div class="tab-content">
+            <div class="tab-pane active" role="tabpanel" id="step1">
+              <div class="edit-form">
+                <h2 class="edit-label">About the hero: </h2>
+                <!-- <form name="step1-form" role="form" data-toggle="validator"> -->
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label for="hero" class="col-sm-2 control-label">Hero Name:</label>
+                    <div class="col-sm-10">
+                     <input type="text" name="subject" class="form-control" id="hero" placeholder="Duy Loan Le" required>
+                   </div>
+                 </div>
+                 <div class="clearfix"></div>
+                 <div class="form-group">
+                  <label for="subject_img" class="col-sm-2 control-label">Hero Image:</label>
+                  <div class="col-sm-10">
+                    <input type="url" name="subject_img" class="form-control" id="subject_img" placeholder="Please enter URL of image">
                   </div>
-                  <ul class="list-inline pull-right">
-                    <li><button class="edit-form btn next-step">Save and continue</button></li>
-                  </ul>
                 </div>
+                <div class="clearfix"></div>
+                <div class="form-group">
+                  <label for="headline" class="col-sm-2 control-label">Headline:</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="headline" class="form-control" id="headline" placeholder="" required>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group">
+                  <label for="twitterAcc" class="col-sm-2 control-label">Twitter handle:</label>
+                  <div class="col-sm-10">
+                    <input type="text" name="twitterAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="twitterAcc" placeholder="@VWiC">
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="form-group">
+                  <label for="facebookAcc" class="col-sm-2 control-label">Facebook:</label>
+                  <div class="col-sm-10">
+                   <input type="text" name="facebookAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" placeholder="@VWiC">
+                 </div>
+               </div>
+             </form>
+                <!-- </form> -->
+              </div>
+              <ul class="list-inline pull-right">
+                <li><button class="edit-form btn next-step">Save and continue</button></li>
+              </ul>
+            </div>
 
                 <div class="tab-pane" role="tabpanel" id="step2">
                   <div class="edit-form-2">
