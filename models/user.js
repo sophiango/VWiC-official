@@ -8,7 +8,7 @@ var StorySchema = mongoose.Schema({
 });
 
 var UserSchema = mongoose.Schema({
-  user_facebook_id : {type: String, unique: true},
+  user_id: {type : String , required : true, unique: true, dropDups: true},
   token : String,
   displayName : String,
   fullName : String,

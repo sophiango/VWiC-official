@@ -1,3 +1,4 @@
+var chance = require('chance').Chance();
 // config/passport.js
 
 // load all the things we need
@@ -46,7 +47,7 @@ module.exports = function(passport) {
     // asynchronous
     process.nextTick(function() {
       // find the user in the database based on their facebook id
-      User.findOne({ 'user_facebook_id' : profile.id }, function(err, user) {
+      User.findOne({ 'user_id' : profile.id }, function(err, user) {
 
         // if there is an error, stop everything and return that
         // ie an error connecting to the database
@@ -62,10 +63,11 @@ module.exports = function(passport) {
             return done(null, user);
           });
         } else {
+          console.log('data: ' + JSON.stringify(profile));
           // if there is no user found with that facebook id, create them
           var newUser = new User();
           // set all of the facebook information in our user model
-          newUser.user_facebook_id = profile.id; // set the users facebook id
+          newUser.user_id = profile.id; // set the users facebook id
           newUser.token = token; // we will save the token that facebook provides to the user
           newUser.displayName = profile.displayName;
           newUser.fullname = profile.name.givenName + ' ' + profile.name.familyName;
