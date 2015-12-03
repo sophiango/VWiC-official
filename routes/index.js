@@ -10,12 +10,19 @@ module.exports = function(passport){
 
   router.get('/', function(req, res) {
     if (req.isAuthenticated()){
+      var image = '/images/'+req.user.gender+'.png';
       res.render('index', {
+        hide_option : '',
+        username: req.user.displayName,
+        gender_img : image,
         endpoint : '/logout',
         button_display:' Log out'
       });
     } else {
       res.render('index', {
+        hide_option : 'hidden',
+        username : null,
+        gender_img : '',
         endpoint : '/auth/facebook',
         button_display:' Log in with Facebook'
       });
