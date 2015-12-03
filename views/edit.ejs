@@ -3,6 +3,9 @@
 <head>
   <% include header %>
   <link rel="stylesheet" type="text/css" href="/css/edit.css"/>
+  <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -17,23 +20,26 @@
       <div>
         <nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
           <ul class="nav navbar-nav navbar-left navstyle">
-            <li><a href="/" class="page-scroll active">Home</a></li>
+            <li><a href="/" class="page-scroll">Home</a></li>
             <li><a href="/story" class="page-scroll">Hall of fame</a></li>
           </ul>
-          <form method="GET" action="/logout">
-            <button type="submit" class="btn btn-lg btn-danger navbar-btn navbar-right">Log out</button>
-          </form>
-        </nav>
+          <ul class="nav navbar-nav navbar-right navstyle">
+            <li><a href="/profile"><img width="30px" height="30px" src="<%=gender_img%>"></img>   <%=username%></a><li>
+              <form method="GET" action="/logout">
+                <li><button type="submit" class="btn btn-lg btn-primary fb navbar-btn"><span><i class="fa fa-facebook-square"></i></span>Log out</button></li>
+              </form>
+            </ul>
+          </nav>
+        </div>
       </div>
-  </div>
-</div> <!-- END SECTION NAVBAR -->
-  <div class="container">
-    <h3 class="hostyle">Creating a new hero story</h3>
-    <div class="row">
-      <section>
-        <div class="wizard">
-          <div class="wizard-inner">
-            <div class="connecting-line"></div>
+    </div> <!-- END SECTION NAVBAR -->
+    <div class="container">
+      <h3 class="edit-header">Creating a new hero story</h3>
+      <div class="row">
+        <section>
+          <div class="wizard">
+            <div class="wizard-inner">
+              <div class="connecting-line"></div>
               <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active">
                   <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
@@ -63,68 +69,68 @@
                     </span>
                   </a>
                 </li>
-            </ul>
-          </div>
+              </ul>
+            </div>
 
-        <form name="create_new_form" method="post" action="/story/new" data-toggle="validator">
-          <div class="tab-content">
-            <div class="tab-pane active" role="tabpanel" id="step1">
-              <div class="edit-form">
-                <h2 class="edit-label">About the hero: </h2>
-                <!-- <form name="step1-form" role="form" data-toggle="validator"> -->
-                  <div class="form-group">
-                    <div class="input-group">
-                      <label for="subject">Hero Name:</label>
-                      <input type="text" name="subject" class="form-control" placeholder="" required>
-                    </div>
-                    <div class="input-group">
-                      <label for="subject">Hero Image:</label>
-                      <input type="url" name="subject_img" class="form-control" placeholder="">
-                    </div>
-                    <div class="input-group">
-                      <label for="subject">Headline:</label>
-                      <input type="text" name="headline" class="form-control" placeholder="" required>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-6">
-                        <div class="input-group">
-                          <div class="input-group-addon">Twitter @</div>
-                          <!-- <input type="text" class="form-control" name="twitterAcc"> -->
-                          <input type="text" name="twitterAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="twitterAcc" placeholder="">
+            <form name="create_new_form" method="post" action="/story/new" data-toggle="validator">
+              <div class="tab-content">
+                <div class="tab-pane active" role="tabpanel" id="step1">
+                  <div class="edit-form">
+                    <h2 class="edit-label">About the hero: </h2>
+                    <!-- <form name="step1-form" role="form" data-toggle="validator"> -->
+                    <div class="form-group">
+                      <div class="input-group">
+                        <label for="subject">Hero Name:</label>
+                        <input type="text" name="subject" class="form-control" placeholder="" required>
+                      </div>
+                      <div class="input-group">
+                        <label for="subject">Hero Image:</label>
+                        <input type="url" name="subject_img" class="form-control" placeholder="">
+                      </div>
+                      <div class="input-group">
+                        <label for="subject">Headline:</label>
+                        <input type="text" name="headline" class="form-control" placeholder="" required>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <div class="input-group-addon">Twitter @</div>
+                            <!-- <input type="text" class="form-control" name="twitterAcc"> -->
+                            <input type="text" name="twitterAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="twitterAcc" placeholder="">
+                          </div>
+                        </div>
+                        <div class="col-sm-6">
+                          <div class="input-group">
+                            <div class="input-group-addon">Facebook</div>
+                            <!-- <input type="text" class="form-control" name="facebookAcc"> -->
+                            <input type="text" name="facebookAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" placeholder="">
+                          </div>
                         </div>
                       </div>
-                      <div class="col-sm-6">
-                        <div class="input-group">
-                          <div class="input-group-addon">Facebook</div>
-                          <!-- <input type="text" class="form-control" name="facebookAcc"> -->
-                          <input type="text" name="facebookAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" placeholder="">
-                        </div>
-                      </div>
                     </div>
+                    <!-- </form> -->
                   </div>
-                <!-- </form> -->
-              </div>
-              <ul class="list-inline pull-right">
-                <li><button class="edit-form btn next-step">Save and continue</button></li>
-              </ul>
-            </div>
+                  <ul class="list-inline pull-right">
+                    <li><button class="edit-form btn next-step">Save and continue</button></li>
+                  </ul>
+                </div>
 
-            <div class="tab-pane" role="tabpanel" id="step2">
-              <div class="edit-form-2">
-                <h2 class="edit-label">How the hero inspired you: </h2>
-                <!-- <form id="step2-form"> -->
-                  <textarea name="content" class="form-control" rows="12" placeholder="Place content here" required></textarea>
-                <!-- </form> -->
-              </div>
-              <ul class="list-inline pull-right">
-                <!-- <li><button type="button" class="btn btn-default prev-step">Previous</button></li> -->
-                <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
-                <li><button type="button" class="edit-form btn next-step">Save and continue</button></li>
-              </ul>
-            </div>
+                <div class="tab-pane" role="tabpanel" id="step2">
+                  <div class="edit-form-2">
+                    <h2 class="edit-label">How the hero inspired you: </h2>
+                    <!-- <form id="step2-form"> -->
+                    <textarea name="content" class="form-control" rows="12" placeholder="Place content here" required></textarea>
+                    <!-- </form> -->
+                  </div>
+                  <ul class="list-inline pull-right">
+                    <!-- <li><button type="button" class="btn btn-default prev-step">Previous</button></li> -->
+                    <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
+                    <li><button type="button" class="edit-form btn next-step">Save and continue</button></li>
+                  </ul>
+                </div>
 
-            <div class="tab-pane" role="tabpanel" id="step3">
-                <!-- <form id="step3-form" class="edit-form"> -->
+                <div class="tab-pane" role="tabpanel" id="step3">
+                  <!-- <form id="step3-form" class="edit-form"> -->
                   <div class="form-group">
                     <h2 class="edit-label">More resources (articles and images,): </h2>
                     <p>Articles: (Please paste paragraphs you want to quote and the resource of the article)</p>
@@ -182,30 +188,30 @@
                       <input name="cap3" type="text" class="form-control" placeholder="">
                     </div>
                   </div>
-                <!-- </form> -->
-              <ul class="list-inline pull-right">
-                <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
-                <!-- <li><button type="button" class="edit-form btn btn-default next-step">Skip</button></li> -->
-                <li><button type="submit" class="edit-form btn next-step">Publish</button></li>
-              </ul>
-              </form>
-            </div>
-            <div class="tab-pane" role="tabpanel" id="complete">
-              <form name="view-story" method="get" action="/story">
-              <div class="edit-form-complete">
-                <p>Thank you for sharing your hero story!</p>
+                  <!-- </form> -->
+                  <ul class="list-inline pull-right">
+                    <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
+                    <!-- <li><button type="button" class="edit-form btn btn-default next-step">Skip</button></li> -->
+                    <li><button type="submit" class="edit-form btn next-step">Publish</button></li>
+                  </ul>
+                </form>
               </div>
-              <ul class="list-inline pull-right">
-                <!-- <li><a href="/story"><button type="submit" class="edit-form btn next-step">View story</button></a></li> -->
-                <li><button type="submit" class="edit-form btn">View story</button></li>
-              </ul>
-              </form>
+              <div class="tab-pane" role="tabpanel" id="complete">
+                <form name="view-story" method="get" action="/story">
+                  <div class="edit-form-complete">
+                    <p>Thank you for sharing your hero story!</p>
+                  </div>
+                  <ul class="list-inline pull-right">
+                    <!-- <li><a href="/story"><button type="submit" class="edit-form btn next-step">View story</button></a></li> -->
+                    <li><button type="submit" class="edit-form btn">View story</button></li>
+                  </ul>
+                </form>
+              </div>
+              <div class="clearfix"></div>
             </div>
-            <div class="clearfix"></div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
-  </div>
-</body>
-</html>
+  </body>
+  </html>

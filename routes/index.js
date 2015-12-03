@@ -30,7 +30,14 @@ module.exports = function(passport){
   });
 
   router.get('/story/new',function(req,res){
-    res.render('edit');
+    if (req.isAuthenticated()){
+      res.render('edit',{
+        username: req.user.displayName,
+        gender_img : image
+      });
+    } else {
+      res.redirect('/story');
+    }
   });
 
   // =====================================

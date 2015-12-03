@@ -1,3 +1,11 @@
+h3.edit-header {
+  color:#2196F3;
+  font-size:50px;
+  font-family: 'Pacifico',sans-serif;
+  margin:40px;
+  text-align: center;
+}
+
 #step3 .input-group{
     padding:10px;
 }
