@@ -88,7 +88,7 @@
 {
 	font-family: 'Pacifico', cursive;
 	/*color: #c6027f; #33A29D	*/
-	color: #B11818;
+	color: #F44336;
 	font-size: 60px;
 }
 
@@ -395,8 +395,8 @@
 {
 	font-family: 'Pacifico', sans-serif;
 	margin-top: 0px !important;
-	font-size:30px;
-	color:#F44336;
+	font-size:25px;
+	color:#2196F3;
 }
 .alldesc h4
 {

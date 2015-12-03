@@ -65,8 +65,8 @@ button.edit-form{
 	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
   color:#fff;
-  background-color:#E91E63;
-  border-color:#E91E63;
+  background-color:#2196F3;
+  border-color:#2196F3;
 }
 
 .wizard {
@@ -123,12 +123,12 @@ span.round-tab i{
 }
 .wizard li.active span.round-tab {
     background: #fff;
-    border: 2px solid #E91E63;
+    border: 2px solid #2196F3;
 
 }
 .wizard li.active span.round-tab i{
     /*color: #5bc0de;*/
-    color: #E91E63;
+    color: #2196F3;
 }
 
 span.round-tab:hover {
@@ -149,7 +149,7 @@ span.round-tab:hover {
     bottom: 0px;
     border: 5px solid transparent;
     /*border-bottom-color: #5bc0de;*/
-    border-bottom-color: #E91E63;
+    border-bottom-color: #2196F3;
     transition: 0.1s ease-in-out;
 }
 
@@ -161,7 +161,7 @@ span.round-tab:hover {
     margin: 0 auto;
     bottom: 0px;
     border: 10px solid transparent;
-    border-bottom-color: #E91E63;
+    border-bottom-color: #2196F3;
 }
 
 .wizard .nav-tabs > li a {

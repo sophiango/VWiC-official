@@ -2,7 +2,12 @@
 <html lang="en-US">
 <head>
   <% include header %>
-</head>  
+  <script>
+  $(window).load(function(){
+    $("#menu").sticky({ topSpacing: 0 });
+  });
+  </script>
+</head>
 <body>
   <!-- NAVBAR -->
   <div class="navbar menubar" id="menu">
