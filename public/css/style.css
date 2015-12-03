@@ -609,7 +609,8 @@ figure.effect-Beauty:hover p {
 .form-control, .form-control:focus
 {
 	color: #000 !important;
-	border: 1px solid #294280 !important;
+	/*border: 1px solid #294280 !important;*/
+	border: 1px solid #E0E0E0;
 	background-color: #fff !important;
 	/*background-color: #CB5750 !important;*/
 	box-shadow: none !important;
@@ -658,10 +659,10 @@ figure.effect-Beauty:hover p {
 .form-control::-moz-placeholder { color: white !important; }
 .form-control:-ms-input-placeholder { color: white !important; }*/
 
-.form-control::-webkit-input-placeholder { color: red !important; }
-.form-control:-moz-placeholder { color: red !important; }
-.form-control::-moz-placeholder { color: red !important; }
-.form-control:-ms-input-placeholder { color: red !important; }
+.form-control::-webkit-input-placeholder { color: grey !important; }
+.form-control:-moz-placeholder { color: grey !important; }
+.form-control::-moz-placeholder { color: grey !important; }
+.form-control:-ms-input-placeholder { color: grey !important; }
 
 /*------------------------------------------/
 /-----------------Footer--------------------/
