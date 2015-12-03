@@ -31,6 +31,7 @@ module.exports = function(passport){
 
   router.get('/story/new',function(req,res){
     if (req.isAuthenticated()){
+      var image = '/images/'+req.user.gender+'.png';
       res.render('edit',{
         username: req.user.displayName,
         gender_img : image

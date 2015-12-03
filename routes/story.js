@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Story = require('../models/story');
 var chance = require('chance').Chance();
+
 router.get('/', function(req, res) {
   Story.find(function(err,stories){
     if (err){
