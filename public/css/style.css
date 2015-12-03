@@ -279,6 +279,19 @@
 	text-transform: uppercase;
 }
 
+.white h1 {
+	padding-top: 35px;
+}
+
+.white p {
+	padding-top: 20px;
+	font-family: "Source Sans Pro",sans-serif;
+	font-size: 17px;
+}
+.centered {
+    text-align: center;
+}
+
 .subscribe
 {
 	background-color: #FED136;
@@ -375,8 +388,8 @@
     font-size: 40px;
     margin-top: 0px !important;
     font-weight: 600;
-	letter-spacing: 1px;
-	text-transform: uppercase;
+		letter-spacing: 1px;
+		text-transform: uppercase;
 }
 .alldesc h3
 {
@@ -384,6 +397,24 @@
 	margin-top: 0px !important;
 	font-size:30px;
 	color:#F44336;
+}
+.alldesc h4
+{
+    /*color: #CB5750;*/
+		color: #2196F3;
+    font-family: "Source Sans Pro",sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+		letter-spacing: 1px;
+}
+.alldesc h5
+{
+    /*color: #CB5750;*/
+		color: #F44336;
+    font-family: "Pacifico",sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+		letter-spacing: 1px;
 }
 .desc
 {
