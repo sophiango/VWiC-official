@@ -416,6 +416,13 @@
     font-weight: 100;
 		letter-spacing: 1px;
 }
+
+.alldesc button {
+	color: #fff;
+	background-color: #F44336;
+	font-family: 'Raleway', sans-serif;
+}
+
 .desc
 {
 	 font-family: "Source Sans Pro",sans-serif;
