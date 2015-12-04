@@ -8,6 +8,7 @@ router.get('/', function(req, res) {
     if (err){
       res.redirect('/');
     } else {
+      var image = '/images/'+req.user.gender+'.png';
       if (req.isAuthenticated()){
         res.render('stories',{
           hide_option : '',

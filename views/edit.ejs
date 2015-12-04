@@ -4,9 +4,8 @@
   <% include header %>
   <link rel="stylesheet" type="text/css" href="/css/edit.css"/>
   <script type="text/javascript" src="/js/edit.js"></script>
-  <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/css/bootstrapValidator.min.css"/>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
-  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css"/>
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/js/bootstrapValidator.min.js"></script>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -73,48 +72,48 @@
               </ul>
             </div>
 
-            <form name="create_new_form" method="post" action="/story/new" data-toggle="validator">
+            <form name="create_new_form" method="post" action="/story/new" role="form" data-toggle="validator">
               <div class="tab-content">
                 <div class="tab-pane active" role="tabpanel" id="step1">
                   <div class="edit-form">
                     <h2 class="edit-label">About the hero: </h2>
                     <!-- <form name="step1-form" role="form" data-toggle="validator"> -->
-                    <form class="form-horizontal">
+                    <div class="form-horizontal">
                       <div class="form-group">
                         <label for="hero" class="col-sm-2 control-label">Hero Name:</label>
                         <div class="col-sm-10">
-                          <input type="text" name="subject" class="form-control" id="hero" placeholder="Duy Loan Le" required>
+                          <input type="text" name="subject" class="form-control" id="hero" placeholder="For example, Duy Loan Le" required>
                         </div>
                       </div>
-                      <div class="clearfix"></div>
+
                       <div class="form-group">
                         <label for="subject_img" class="col-sm-2 control-label">Hero Image:</label>
                         <div class="col-sm-10">
                           <input type="url" name="subject_img" class="form-control" id="subject_img" placeholder="Please enter URL of image">
                         </div>
                       </div>
-                      <div class="clearfix"></div>
+
                       <div class="form-group">
                         <label for="headline" class="col-sm-2 control-label">Headline:</label>
                         <div class="col-sm-10">
-                          <input type="text" name="headline" class="form-control" id="headline" placeholder="" required>
+                          <input type="text" name="headline" class="form-control" id="headline" placeholder="For example, 'The first and only female senior engineer of Texas Instrument'" required>
                         </div>
                       </div>
-                      <div class="clearfix"></div>
+
                       <div class="form-group">
                         <label for="twitterAcc" class="col-sm-2 control-label">Twitter handle:</label>
                         <div class="col-sm-10">
-                          <input type="text" name="twitterAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="twitterAcc" placeholder="@VWiC">
+                          <input type="text" name="twitterAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="twitterAcc" placeholder="Twitter handler only: @VWiC">
                         </div>
                       </div>
-                      <div class="clearfix"></div>
+
                       <div class="form-group">
                         <label for="facebookAcc" class="col-sm-2 control-label">Facebook:</label>
                         <div class="col-sm-10">
-                          <input type="text" name="facebookAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" placeholder="@VWiC">
+                          <input type="text" name="facebookAcc" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" placeholder="Facebook name www.facebook.com/{your-facebook id-here}">
                         </div>
                       </div>
-                    </form>
+                    </div>
                     <!-- </form> -->
                   </div>
                   <ul class="list-inline pull-right">
@@ -140,27 +139,26 @@
                   <!-- <form id="step3-form" class="edit-form"> -->
                   <div class="form-group">
                     <h2 class="edit-label">More resources (articles and images,): </h2>
-                    <p>Articles: (Please paste paragraphs you want to quote and the resource of the article)</p>
+                    <p>Articles: (Please paste paragraphs you want to quote and the URL of the article referenced)</p>
                     <!-- <textarea name="quote1" class="form-control quote" rows="12" placeholder=""></textarea> -->
                     <div class="input-group">
-                      <!--<div class="input-group-addon">Quote 1</div>-->
-                      <label for="subject">Quote 1:</label>
-                      <input type="text" name="quote1" class="form-control quote" placeholder="">
+                      <div class="input-group-addon">Quote 1</div>
+                      <input type="text" name="quote1" class="form-control quote" placeholder="For example,
+                       'She is an inspiration to the young generation'">
                     </div>
                     <div class="input-group">
                       <div class="input-group-addon">Source 1</div>
-                      <input type="url" name="src1" class="form-control quote" placeholder="">
+                      <input type="url" name="src1" class="form-control quote" placeholder="For example, 'http://nytimes.com'">
                     </div>
                     <!-- <textarea name="quote2" class="form-control quote" rows="12" placeholder="Place content here"></textarea> -->
                     <div class="input-group">
                       <div class="input-group-addon">Quote 2</div>
-                      <input type="text" name="quote2" class="form-control quote" placeholder="">
+                      <input type="text" name="quote2" class="form-control quote" placeholder="For example, 'Duy-Loan has been a great model for Vietnamese women in tech'">
                     </div>
                     <div class="input-group">
                       <div class="input-group-addon">Source 2</div>
-                      <input name="src2" type="url" class="form-control" placeholder="">
+                      <input name="src2" type="url" class="form-control" placeholder="For example, 'http://medium.com'">
                     </div>
-                    <!-- <textarea name="quote3" name=quote1 class="form-control quote" rows="12" placeholder="Place content here"></textarea> -->
                     <div class="input-group">
                       <div class="input-group-addon">Quote 3</div>
                       <input type="text" name="quote3" class="form-control quote" placeholder="">
@@ -169,14 +167,14 @@
                       <div class="input-group-addon">Source 3</div>
                       <input name="src3" type="url" class="form-control" placeholder="">
                     </div>
-                    <p>Images: (Please paste the link of the image you want to attach to your post)</p>
+                    <p>Images: (Please paste the URL of the image you want to attach to your post)</p>
                     <div class="input-group">
                       <div class="input-group-addon">Image 1</div>
-                      <input name="img1" type="url" class="form-control" placeholder="">
+                      <input name="img1" type="url" class="form-control" placeholder="For example, http://sophiango-image.jpg">
                     </div>
                     <div class="input-group">
                       <div class="input-group-addon">Caption 1</div>
-                      <input name="cap1" type="text" class="form-control" placeholder="">
+                      <input name="cap1" type="text" class="form-control" placeholder="For example, 'Image of Sophia'">
                     </div>
                     <div class="input-group">
                       <div class="input-group-addon">Image 2</div>
@@ -191,7 +189,7 @@
                       <input name="img3" type="url" class="form-control" placeholder="">
                     </div>
                     <div class="input-group">
-                      <div class="input-group-addon">Caption 1</div>
+                      <div class="input-group-addon">Caption 3</div>
                       <input name="cap3" type="text" class="form-control" placeholder="">
                     </div>
                   </div>
@@ -209,7 +207,6 @@
                     <p>Thank you for sharing your hero story!</p>
                   </div>
                   <ul class="list-inline pull-right">
-                    <!-- <li><a href="/story"><button type="submit" class="edit-form btn next-step">View story</button></a></li> -->
                     <li><button type="submit" class="edit-form btn">View story</button></li>
                   </ul>
                 </form>
