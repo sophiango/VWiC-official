@@ -16,13 +16,13 @@ color: #999 !important;
 opacity: 1;
 }
 
-.ng-invalid.ng-dirty{
+/*.ng-invalid.ng-dirty{
   border-color:#F44336;
 }
 
 .ng-valid.ng-dirty{
   border-color:#F44336;
-}
+}*/
 
 .edit-form .quote{
   margin-bottom:20px;
