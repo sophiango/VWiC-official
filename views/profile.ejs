@@ -7,6 +7,7 @@
     $("#menu").sticky({ topSpacing: 0 });
   });
   </script>
+  <link rel="stylesheet" type="text/css" href="/css/profile.css"/>
 </head>
 <body>
   <!-- NAVBAR -->
@@ -29,8 +30,8 @@
           </form>
         </nav>
       </div>
-  </div>
-</div> <!-- END SECTION NAVBAR -->
+    </div>
+  </div> <!-- END SECTION NAVBAR -->
 
   <!-- BODY -->
   <div class="container">
@@ -42,12 +43,77 @@
         <img src="<%=user.imageUrl%>" name="<%=user.displayName%>" class="img-circle"/>
       </div>
     </div>
+
+    <br>
+
     <div>
       <h2 class="banner-text">You wrote <%=user.created_stories.length%> stories</h2>
     </div>
-    <div>
-      <h2 class="banner-text">You be inspired by <%=user.inspired_stories.length%> stories/women</h2>
+
+    <!-- MY STORIES -->
+    <div class="container">
+      <div class="row">
+       <br>
+       <div class="my-stories">
+        <div class="my-story">
+          <strong>Dao Nguyen</strong>
+          <br>
+        <a href="#">How she became the first board member of Texas Instrument</a>
+        </div>
+        <div class="my-story">
+          <strong>Kathy Pham</strong>
+                  <br>
+        <a href="#">How she became the first board member of Texas Instrument</a>
+        </div>
+        <div class="my-story">
+          <strong>Sophia Ngo</strong>
+                  <br>
+        <a href="#">How she became the first board member of Texas Instrument</a>
+        </div>
+        <div class="my-story">
+          <strong>Anh Tu Quach</strong> 
+                  <br>
+        <a href="#">How she became the first board member of Texas Instrument</a>
+        </div>
+      </div>
+    </div>
+  </div><!-- END MY STORIES -->
+
+  <br>
+
+  <div>
+    <h2 class="banner-text">You be inspired by <%=user.inspired_stories.length%> stories/women</h2>
+  </div>
+
+  <!-- MY INSPIRATION -->
+  <div class="container">
+    <div class="row">
+     <br>
+     <div class="my-inspirations">
+      <div class="my-inspiration">
+        <strong>Duy Loan Le</strong>
+        <br>
+        <a href="#">How she became the first board member of Texas Instrument</a>
+      </div>
+      <div class="my-inspiration">
+        <strong>Duy Loan Le</strong>
+                <br>
+        <a href="#">How she became the first board member of Texas Instrument</a>
+      </div>
+      <div class="my-inspiration">
+        <strong>Duy Loan Le</strong>
+                <br>
+        <a href="#">How she became the first board member of Texas Instrument</a>
+      </div>
+      <div class="my-inspiration">
+        <strong>Duy Loan Le</strong>
+                <br>
+        <a href="#">How she became the first board member of Texas Instrument</a>
+      </div>
     </div>
   </div>
+</div><!-- END MY INSPIRATION -->
+</div>
+</div>
 </body>
 </html>
