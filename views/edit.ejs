@@ -72,7 +72,7 @@
               </ul>
             </div>
 
-            <form name="create_new_form" method="post" action="/story/new">
+            <form name="createStory" method="post" action="/story/new">
               <div class="tab-content">
                 <div class="tab-pane active" role="tabpanel" id="step1">
                   <div class="edit-form">
@@ -82,21 +82,21 @@
                       <div class="form-group">
                         <label for="hero" class="col-sm-2 control-label">Hero Name:</label>
                         <div class="col-sm-10">
-                          <input type="text" name="subject" class="form-control" id="hero" placeholder="For example, Duy Loan Le" required>
+                          <input type="text" name="subject" class="form-control" placeholder="For example, Duy Loan Le" required>
                         </div>
                       </div>
 
                       <div class="form-group">
                         <label for="subject_img" class="col-sm-2 control-label">Hero Image:</label>
                         <div class="col-sm-10">
-                          <input type="url" name="subject_img" class="form-control" id="subject_img" placeholder="Please enter URL of image">
+                          <input type="url" name="subject_img" class="form-control" placeholder="Please enter URL of image">
                         </div>
                       </div>
 
                       <div class="form-group">
                         <label for="headline" class="col-sm-2 control-label">Headline:</label>
                         <div class="col-sm-10">
-                          <input type="text" name="headline" class="form-control" id="headline" placeholder="For example, 'The first and only female senior engineer of Texas Instrument'" required>
+                          <input type="text" name="headline" class="form-control" placeholder="For example, 'The first and only female senior engineer of Texas Instrument'" required>
                         </div>
                       </div>
 
@@ -217,5 +217,39 @@
         </section>
       </div>
     </div>
+    <script type="text/javascript">
+    jQuery().ready(function() {
+
+      var v = jQuery("#createStory").validate({
+          rules: {
+            uname: {
+              required: true,
+              minlength: 2,
+              maxlength: 16
+            },
+            uemail: {
+              required: true,
+              minlength: 2,
+              email: true,
+              maxlength: 100,
+            },
+            upass1: {
+              required: true,
+              minlength: 6,
+              maxlength: 15,
+            },
+            upass2: {
+              required: true,
+              minlength: 6,
+              equalTo: "#upass1",
+            }
+
+          },
+          errorElement: "span",
+          errorClass: "help-inline",
+        });
+
+    });
+    </script>
   </body>
   </html>
