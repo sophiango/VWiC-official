@@ -135,72 +135,112 @@
                   </ul>
                 </div>
 
+
+                <!--STEP 3 -->
                 <div class="tab-pane" role="tabpanel" id="step3">
                   <!-- <form id="step3-form" class="edit-form"> -->
-                  <div class="form-group">
-                    <h2 class="edit-label">More resources (articles and images,): </h2>
-                    <p>Articles: (Please paste paragraphs you want to quote and the URL of the article referenced)</p>
-                    <!-- <textarea name="quote1" class="form-control quote" rows="12" placeholder=""></textarea> -->
-                    <div class="input-group">
-                      <div class="input-group-addon">Quote 1</div>
-                      <input type="text" name="quote1" class="form-control quote" placeholder="For example,
-                       'She is an inspiration to the young generation'">
+                  <h2 class="edit-label">More resources (articles and images,): </h2>
+                  <p>Articles: (Please paste paragraphs you want to quote and the URL of the article referenced)</p>
+
+                  <div class="form-horizontal">
+                    <div class="form-group">
+                      <label for="quote1" class="col-sm-2 control-label">Quote 1:</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="quote1" class="form-control" id="quote1" placeholder="For example, 'She is an inspiration to the young generation'" required>
+                      </div>
                     </div>
-                    <div class="input-group">
-                      <div class="input-group-addon">Source 1</div>
-                      <input type="url" name="src1" class="form-control quote" placeholder="For example, 'http://nytimes.com'">
+
+                    <div class="form-group">
+                      <label for="src1" class="col-sm-2 control-label">Source 1:</label>
+                      <div class="col-sm-10">
+                        <input type="url" name="src1" class="form-control" id="src1" placeholder="For example, 'http://nytimes.com'">
+                      </div>
                     </div>
-                    <!-- <textarea name="quote2" class="form-control quote" rows="12" placeholder="Place content here"></textarea> -->
-                    <div class="input-group">
-                      <div class="input-group-addon">Quote 2</div>
-                      <input type="text" name="quote2" class="form-control quote" placeholder="For example, 'Duy-Loan has been a great model for Vietnamese women in tech'">
+
+                    <div class="form-group">
+                      <label for="quote2" class="col-sm-2 control-label">Quote 2:</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="quote2" class="form-control" id="quote2" placeholder="For example, 'The first and only female senior engineer of Texas Instrument'" required>
+                      </div>
                     </div>
-                    <div class="input-group">
-                      <div class="input-group-addon">Source 2</div>
-                      <input name="src2" type="url" class="form-control" placeholder="For example, 'http://medium.com'">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-addon">Quote 3</div>
-                      <input type="text" name="quote3" class="form-control quote" placeholder="">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-addon">Source 3</div>
-                      <input name="src3" type="url" class="form-control" placeholder="">
-                    </div>
-                    <p>Images: (Please paste the URL of the image you want to attach to your post)</p>
-                    <div class="input-group">
-                      <div class="input-group-addon">Image 1</div>
-                      <input name="img1" type="url" class="form-control" placeholder="For example, http://sophiango-image.jpg">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-addon">Caption 1</div>
-                      <input name="cap1" type="text" class="form-control" placeholder="For example, 'Image of Sophia'">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-addon">Image 2</div>
-                      <input name="img2" type="url" class="form-control" placeholder="">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-addon">Caption 2</div>
-                      <input name="cap2" type="text" class="form-control" placeholder="">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-addon">Image 3</div>
-                      <input name="img3" type="url" class="form-control" placeholder="">
-                    </div>
-                    <div class="input-group">
-                      <div class="input-group-addon">Caption 3</div>
-                      <input name="cap3" type="text" class="form-control" placeholder="">
+
+                    <div class="form-group">
+                      <label for="src2" class="col-sm-2 control-label">Source 2:</label>
+                      <div class="col-sm-10">
+                        <input type="url" name="src2" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="src2" placeholder="For example, 'http://medium.com'">
                     </div>
                   </div>
+
+                  <div class="form-group">
+                    <label for="quote3" class="col-sm-2 control-label">Quote 3:</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="quote3" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="quote3" placeholder="">
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="src3" class="col-sm-2 control-label">Source 3:</label>
+                    <div class="col-sm-10">
+                      <input type="url" name="src2" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="src2" placeholder="">
+                    </div>
+                  </div>
+
+                  <p>Images: (Please paste the URL of the image you want to attach to your post)</p>
+
+                  <div class="form-horizontal">
+                    <div class="form-group">
+                      <label for="img1" class="col-sm-2 control-label">Image 1:</label>
+                      <div class="col-sm-10">
+                        <input type="url" name="img1" class="form-control" id="img1" placeholder="For example, http://sophiango-image.jpg" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="cap1" class="col-sm-2 control-label">Caption 1:</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="cap1" class="form-control" id="cap1" placeholder="For example, 'Image of Sophia and Duy Loan Le at GHC15'">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="img2" class="col-sm-2 control-label">Image 2:</label>
+                      <div class="col-sm-10">
+                        <input type="url" name="img2" class="form-control" id="img2" placeholder="" required>
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="cap2" class="col-sm-2 control-label">Caption 2:</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="cap2" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="cap2" placeholder="">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="img3" class="col-sm-2 control-label">Image 3:</label>
+                      <div class="col-sm-10">
+                        <input type="url" name="img3" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="img3" placeholder="">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="cap3" class="col-sm-2 control-label">Caption 3:</label>
+                      <div class="col-sm-10">
+                        <input type="text" name="cap3" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" id="cap3" placeholder="">
+                      </div>
+                    </div>
+                  </div>
+
                   <!-- </form> -->
                   <ul class="list-inline pull-right">
                     <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
                     <!-- <li><button type="button" class="edit-form btn btn-default next-step">Skip</button></li> -->
                     <li><button type="submit" class="edit-form btn next-step">Publish</button></li>
                   </ul>
-                </form>
+                </div><!-- END STEP 3 -->
               </div>
+
+
               <div class="tab-pane" role="tabpanel" id="complete">
                 <form name="view-story" method="get" action="/story">
                   <div class="edit-form-complete">
