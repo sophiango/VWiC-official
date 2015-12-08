@@ -6,6 +6,12 @@ h3.edit-header {
   text-align: center;
 }
 
+#step3 .form-group {
+    margin-bottom: 15px !important;
+    color: #000;
+    font-family: "Raleway",sans-serif;
+}
+
 #step3 .input-group{
     padding:10px;
 }
