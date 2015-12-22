@@ -27,10 +27,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use("/css", express.static(__dirname + '/css'));
-app.use("/fonts", express.static(__dirname + '/fonts'));
-app.use("/images", express.static(__dirname + '/images'));
-app.use("/js", express.static(__dirname + '/js'));
+app.use('/css', express.static(__dirname + '/css'));
+app.use('/fonts', express.static(__dirname + '/fonts'));
+app.use('/images', express.static(__dirname + '/images'));
+app.use('/js', express.static(__dirname + '/js'));
 
 require('./config/passport')(passport); // pass passport for configuration
 // required for passport
@@ -92,11 +92,11 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
- var server_port = process.env.OPENSHIFT_NODEJS_PORT || 3000
- var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+ var server_port = process.env.OPENSHIFT_NODEJS_PORT
+ var server_ip_address = process.env.OPENSHIFT_NODEJS_IP
 
  server.listen(server_port, server_ip_address, function () {
-   console.log( "Listening on " + server_ip_address + ", server_port " + server_port )
+   console.log( 'Listening on ' + server_ip_address + ', server_port ' + server_port )
  });
 
 module.exports = app;
