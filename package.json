@@ -2,8 +2,9 @@
   "name": "VWiC",
   "version": "0.0.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js"
   },
   "dependencies": {
     "body-parser": "~1.13.2",
@@ -19,6 +20,6 @@
     "passport-facebook" : "~1.0.2",
     "connect-flash" : "~0.1.1",
     "bcrypt-nodejs" : "latest",
-    "express-session" : "*" 		
+    "express-session" : "*"
   }
 }
